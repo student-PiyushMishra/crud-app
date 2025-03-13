@@ -4,6 +4,7 @@
   "description": "Ah! just practicing mongodb atlas",
   "main": "index.js",
   "scripts": {
+    "build": "npm i",
     "server": "nodemon index.js",
     "start": "node index.js"
   },
