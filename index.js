@@ -1,7 +1,6 @@
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
-const userModel = require('./usermodel');
 const router = require('./router')
 require('dotenv').config()
 
