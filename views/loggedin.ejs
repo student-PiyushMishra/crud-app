@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Data</title>
+    <link rel="stylesheet" href="./stylesheets/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <%if(statusCode===404){%>
+            <h2><%=data%></h2>
+            <div class="info">
+                <div class="help">
+                    <i style="font-family: NeueMachina;font-size: large;color:lightseagreen;"
+                        class="ri-question-fill"></i>
+                    <p>Go to the home page and register yourself as a user first and then try to login.</p>
+                </div>
+            </div>
+            <a href="/">Return to home</a>
+        <%}%>
+        <%if(statusCode===405){%>
+            <h2><%=data%></h2>
+            <div class="info">
+                <div class="help">
+                    <i style="font-family: NeueMachina;font-size: large;color:lightseagreen;"
+                        class="ri-question-fill"></i>
+                    <p>You can try again or can make a new account with a different email. But trying again would be a better option...</p>
+                </div>
+            </div>
+            <a href="/login">Try Again</a>
+        <%}%>
+        <%if(statusCode===200){%>
+            <h2><%='Welcome, '+data[0].name%></h2>
+            <div class="info">
+                <div class="help">
+                    <i style="font-family: NeueMachina;font-size: large;color:lightseagreen;"
+                        class="ri-question-fill"></i>
+                    <p>Your credentials...</p>
+                </div>
+            </div>
+            <div class="data" style="display: flex;flex-direction: column;gap: .3em;margin-top: 1em;margin-bottom: 1em;">
+                <p>Your age: <%=data[0].age%></p>
+                <p>Your email: <%=data[0].email%></p>
+                <p>Your password: <%=data[0].password%></p>
+            </div>
+            <a href="/update"><button>Wanna Update Ur Data</button></a>
+        <%}%>
+        <a href="/">Return to Home</a>
+        <footer>Made with 💖 by Piyush Mishra</footer>
+    </div>
+
+</body>
+
+</html>

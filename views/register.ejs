@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Yourself</title>
+    <link rel="stylesheet" href="./stylesheets/index.css">
+    <style>
+        #wrapper{
+            max-height: 100vh;
+            max-width: 100vw;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <h2>Register</h2>
+        <div class="help">
+            <i style="font-family: NeueMachina;font-size: large;color:lightseagreen;" class="ri-question-fill"></i>
+            <p>Fill the below credentials and get yourself registered as a valid user in the database and do remember
+                your password for logging in next time...</p>
+        </div>
+        <form action="/register" method="post">
+            <label for="name"><input name="name" type="text" placeholder="Enter your name" required></label>
+            <label for="age"><input name="age" type="number" placeholder="Enter your age" required></label>
+            <label for="email"><input name="email" type="email" placeholder="Enter your email" required></label>
+            <label for="password"><input name="password" type="password" placeholder="Enter your password"
+                    required></label>
+            <button>Register</button>
+        </form>
+        <a href="/">Return to Home</a>
+        <footer>Made with 💖 by Piyush Mishra</footer>
+    </div>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

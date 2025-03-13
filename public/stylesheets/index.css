@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'NeueMachina';
+    src: url('../fonts/NeueMachina-Light.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body{
+    height:100%;
+    width: 100%;
+}
+
+#wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:3vh;
+    background-color: rgb(20, 23, 21);
+    min-height: 100vh;
+    min-width:100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    padding:2rem;
+    position:absolute;
+    overflow: hidden;
+}
+
+*::selection{
+    background-color: transparent;
+    color: chocolate;
+}
+
+h2{
+    font-size: 1.7rem;
+    font-family:'NeueMachina';
+    color:lightseagreen;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; 
+}
+
+
+a{
+    margin-top: 3rem;
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:lightseagreen;
+    text-decoration:chocolate underline;
+}
+
+button{
+    max-width: fit-content;
+    font-size: medium;
+    padding:0.7rem 1.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    background: lightseagreen;
+    color:rgba(0, 0, 0, 0.885);
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    transition: 0.4s transform ease;
+}
+
+footer{
+    position:absolute;
+    bottom:0%;
+    height:50px;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:lightseagreen;
+    font-family: 'NeueMachina';
+    left:0%;
+}
+
+p{
+    font-size: medium;
+    word-spacing: 1px;
+    letter-spacing: 0.2px;
+    line-height: 120%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:gray;
+}
+
+p::selection{
+    color:crimson;
+}
+
+p span{
+    color:lightseagreen;
+    font-family: 'NeueMachina';
+    font-style: italic;
+    font-weight: 900;
+    font-size: large;
+}
+
+h2>span{
+    margin-left:-7px;
+    color:gray;
+}
+
+button:hover{
+    background-color: rgba(32, 178, 171, 0.914);
+}
+
+button:active{
+    transform: translateX(7px);
+}
+
+.help{
+    display:flex;
+    gap: 0.7em;
+    align-items: center;
+    margin-top: 3em;
+}
+
+form{
+    height:fit-content;
+    width:fit-content;
+    display: flex;
+    flex-direction: column;
+    padding:2em;
+    gap:3vh;
+}
+
+form input{
+    border:none;
+    border-bottom: 1px solid lightseagreen;
+    color:lightseagreen;
+    padding:0.4em 1em;
+    padding-left: 0.5em;
+    font-size: medium;
+    background-color: transparent;
+    width: 100%;
+    min-width: 300px;
+}
+
+@media (max-width:900px) {
+    form input{
+        max-width:300px;
+    }
+}
+
+form input:focus{
+    outline: none;
+}
+
+.buttons{
+    display:flex;
+    gap:2em;
+}

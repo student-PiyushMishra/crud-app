@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+    <link rel="stylesheet" href="./stylesheets/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <h2>Update Your Credentials</h2>
+        <div class="help">
+            <i style="font-family: NeueMachina;font-size: large;color:lightseagreen;" class="ri-question-fill"></i>
+            <p>You can change the below credentials if you want but you can't change your email and email is required
+                for updating the data...</p>
+        </div>
+        <form action="/update" method="post">
+            <label for="email"><input name="email" type="email" placeholder="Enter your email" required></label>
+            <label for="password"><input name="password" type="password" placeholder="Enter your current password"
+                    required></label>
+            <label for="name"><input name="name" type="text" placeholder="Enter your name (If you want)"></label>
+            <label for="age"><input name="age" type="number" placeholder="Enter your age (If you want)"></label>
+            <label for="new_password"><input name="new_password" type="text"
+                    placeholder="Enter your new password (If you want)"></label>
+            <button>Update</button>
+        </form>
+        <a href="/">Return to Home</a>
+        <footer>Made with 💖 by Piyush Mishra</footer>
+    </div>
+    <script>
+        document.querySelector('form button').addEventListener('click', function (e) {
+            if (document.querySelectorAll('input')[2].value.length == 0 && document.querySelectorAll('input')[3].value.length == 0 && document.querySelectorAll('input')[4].value.length == 0) {  
+                e.preventDefault()
+                alert("Atleast 1 change is required to update the database...")
+            }
+        })
+    </script>
+</body>
+
+</html>
