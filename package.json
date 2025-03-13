@@ -4,7 +4,8 @@
   "description": "Ah! just practicing mongodb atlas",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Piyush Mishra",
   "license": "ISC",
