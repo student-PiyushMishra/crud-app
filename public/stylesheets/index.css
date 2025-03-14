@@ -61,6 +61,13 @@ a{
     text-decoration:chocolate underline;
 }
 
+.buttons{
+    width:100vw;
+    display:flex;
+    gap:1em;
+    flex-wrap:wrap;
+}
+
 button{
     max-width: fit-content;
     font-size: medium;
@@ -73,6 +80,7 @@ button{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     cursor: pointer;
     transition: 0.4s transform ease;
+
 }
 
 footer{
